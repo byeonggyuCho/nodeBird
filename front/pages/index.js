@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PostFrom from '../components/PostForm';
 import PostCard from '../components/PostCard';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Home = () => {
     //성능최적화를 위해서 나눈다.
     const user = useSelector(state => state.user.user)
     const isLoggedIn = useSelector(state => state.user.isLoggedIn)
     const { mainPosts } = useSelector(state => state.post)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch({
+            type: 'HELLO_SAGA'
+        });
+    }, []);
 
     return (
         <div>

@@ -6,6 +6,7 @@ import { crateStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from '../reducers';
 import withRedux from 'next-redux-wrapper';
+import rootSaga from '../saga';
 
 const NodeBird = ({ Component, store }) => {
     return (
@@ -35,5 +36,6 @@ export default withRedux((initialState, options) => {
             : (f) => f
     );
     const store = createStore(reducer, initialState);
+    sagaMiddleware.run(rootSaga);
     return store;
 })(NodeBird);

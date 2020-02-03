@@ -6,7 +6,7 @@ import post from './post';
 
 const rootReducer = combindReducers({
     user,
-    psot
+    post
 });
 
 
