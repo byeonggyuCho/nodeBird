@@ -13,7 +13,7 @@
   "dependencies": {
     "antd": "^3.26.7",
     "css-animation": "^2.0.4",
-    "next": "^9.2.1",
+    "next": "^9.3.2",
     "next-redux-wrapper": "^4.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
